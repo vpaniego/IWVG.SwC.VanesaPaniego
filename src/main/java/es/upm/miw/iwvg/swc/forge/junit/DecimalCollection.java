@@ -1,4 +1,4 @@
-package es.upm.miw.iwvg.forge.junit;
+package es.upm.miw.iwvg.swc.forge.junit;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,5 +1,6 @@
-package es.upm.miw.iwvg.forge.junit;
+package es.upm.miw.iwvg.swc.forge.junit;
 
+import es.upm.miw.iwvg.swc.forge.junit.User;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

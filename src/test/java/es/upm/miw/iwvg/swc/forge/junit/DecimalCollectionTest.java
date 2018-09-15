@@ -1,5 +1,6 @@
-package es.upm.miw.iwvg.forge.junit;
+package es.upm.miw.iwvg.swc.forge.junit;
 
+import es.upm.miw.iwvg.swc.forge.junit.DecimalCollection;
 import org.apache.logging.log4j.LogManager;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

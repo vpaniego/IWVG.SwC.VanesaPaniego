@@ -9,10 +9,10 @@ notifications:
   email:
     recipients:
     - vanesa.paniegos@alumnos.upm.es
-services:
-- mysql
-before_install:
-- mysql -e 'CREATE DATABASE IF NOT EXISTS bd;'
 script:
 #Test unitario y de integracion en develop
 - mvn verify
+- mvn org.jacoco:jacoco-maven-plugin:prepare-agent verify
+- mvn sonar:sonar -Dsonar.organization=vpaniego-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR
+
+

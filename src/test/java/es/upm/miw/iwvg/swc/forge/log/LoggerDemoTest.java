@@ -1,6 +1,7 @@
-package es.upm.miw.iwvg.forge.log;
+package es.upm.miw.iwvg.swc.forge.log;
 
 
+import es.upm.miw.iwvg.swc.forge.log.LoggerDemo;
 import org.junit.jupiter.api.Test;
 
 class LoggerDemoTest {

@@ -1,4 +1,4 @@
-package es.upm.miw.iwvg.forge.junit;
+package es.upm.miw.iwvg.swc.forge.junit;
 
 /**
  * Conceptos: Las fracciones propias son aquellas cuyo numerador es menor que el denominador

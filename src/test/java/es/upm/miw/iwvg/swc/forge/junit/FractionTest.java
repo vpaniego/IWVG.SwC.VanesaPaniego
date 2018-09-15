@@ -1,5 +1,6 @@
-package es.upm.miw.iwvg.forge.junit;
+package es.upm.miw.iwvg.swc.forge.junit;
 
+import es.upm.miw.iwvg.swc.forge.junit.Fraction;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
