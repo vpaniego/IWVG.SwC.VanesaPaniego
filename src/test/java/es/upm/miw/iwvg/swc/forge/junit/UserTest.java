@@ -15,10 +15,7 @@ public class UserTest {
     }
 
     @Test
-    void testUserNotNull(){
-
-        Assertions.assertNotNull(user);
-    }
+    void testUserNotNull(){ Assertions.assertNotNull(user); }
 
     @Test
     void testUserFamilyName(){
