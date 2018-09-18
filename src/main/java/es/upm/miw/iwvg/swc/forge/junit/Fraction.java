@@ -41,8 +41,12 @@ public class Fraction {
         this(1, 1);
     }
 
-    public double decimal() {
-        return (double) numerator / denominator;
+    public double decimal() throws ArithmeticException {
+        if (Integer.compare(0, this.denominator) == 0) {
+            throw new ArithmeticException("An integer divide by zero");
+        } else {
+            return (double) numerator / denominator;
+        }
     }
 
     public int getNumerator() {

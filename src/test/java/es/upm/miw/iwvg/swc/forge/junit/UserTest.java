@@ -10,15 +10,33 @@ public class UserTest {
     private User user;
 
     @BeforeEach
-    void before(){
-        user = new User(12, "Pepe", "Lopez");
+    void before() {
+        user = new User(12, "Vanesa", "Paniego");
     }
 
     @Test
-    void testUserNotNull(){ Assertions.assertNotNull(user); }
+    void testUserFullName() {
+        Assertions.assertEquals("Vanesa Paniego", user.getName() + " " + user.getFamilyName());
+    }
 
     @Test
-    void testUserFamilyName(){
-        Assertions.assertNotEquals("Sanchez", user.getFamilyName());
+    void testUserInitials() {
+        Assertions.assertEquals("V.", user.initials());
     }
+
+    @Test
+    void testUserNumber() {
+        Assertions.assertEquals(12, user.getNumber());
+    }
+
+    @Test
+    void testUserName() {
+        Assertions.assertEquals("Vanesa", user.getName());
+    }
+
+    @Test
+    void testUserFamilyName() {
+        Assertions.assertEquals("Paniego", user.getFamilyName());
+    }
+
 }
