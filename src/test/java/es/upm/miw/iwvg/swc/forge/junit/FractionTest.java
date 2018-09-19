@@ -9,11 +9,12 @@ import org.junit.jupiter.api.Test;
 
 public class FractionTest {
 
-    private Fraction fraction;
+    private Fraction fraction, fractionNoEquivalent;
 
     @BeforeEach
     void before() {
         fraction = new Fraction(10, 2);
+        fractionNoEquivalent = new Fraction(5, 5);
     }
 
     @Test
@@ -29,6 +30,12 @@ public class FractionTest {
     @Test
     void testFractionDenominator() {
         Assertions.assertEquals(2, fraction.getDenominator());
+    }
+
+    @Test
+    void testIsEquivalent() {
+        Assertions.assertEquals(true, fraction.isEquivalent(fraction));
+        Assertions.assertEquals(false, fraction.isEquivalent(fractionNoEquivalent));
     }
 
     @Test
