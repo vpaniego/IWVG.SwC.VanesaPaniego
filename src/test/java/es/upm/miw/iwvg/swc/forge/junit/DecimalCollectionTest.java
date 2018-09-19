@@ -48,8 +48,18 @@ class DecimalCollectionTest {
     }
 
     @Test
+    void testLower() {
+        assertEquals(-1.0, this.decimalCollection.lower(), 10e-5);
+    }
+
+    @Test
     void testHigherArithmeticExceptionIfEmpty() {
         assertThrows(ArithmeticException.class, () -> new DecimalCollection().higher());
+    }
+
+    @Test
+    void testLowerArithmeticExceptionIfEmpty() {
+        assertThrows(ArithmeticException.class, () -> new DecimalCollection().lower());
     }
 
 }
