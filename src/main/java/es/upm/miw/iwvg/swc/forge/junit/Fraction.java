@@ -49,6 +49,10 @@ public class Fraction {
         }
     }
 
+    public boolean isEquivalent(Fraction fraccionAComparar){
+        return (this.numerator * fraccionAComparar.denominator) == (this.denominator * fraccionAComparar.numerator);
+    }
+
     public int getNumerator() {
         return numerator;
     }
