@@ -9,12 +9,13 @@ import org.junit.jupiter.api.Test;
 
 public class FractionTest {
 
-    private Fraction fraction, fractionNoEquivalent;
+    private Fraction fraction, fractionNoEquivalent, propiaFraction;
 
     @BeforeEach
     void before() {
         fraction = new Fraction(10, 2);
         fractionNoEquivalent = new Fraction(5, 5);
+        propiaFraction = new Fraction(2,5);
     }
 
     @Test
@@ -45,5 +46,11 @@ public class FractionTest {
 
         LogManager.getLogger(this.getClass()).debug(exception.getMessage());
 
+    }
+
+    @Test
+    void testIsImpropia(){
+        Assertions.assertEquals(true, this.fraction.isImpropia());
+        Assertions.assertEquals(false, this.propiaFraction.isImpropia());
     }
 }
