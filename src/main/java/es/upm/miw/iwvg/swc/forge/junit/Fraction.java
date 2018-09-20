@@ -61,4 +61,8 @@ public class Fraction {
         return denominator;
     }
 
+    public boolean isImpropia(){
+        return (this.numerator > this.denominator) ? true : false;
+    }
+
 }
