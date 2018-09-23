@@ -12,11 +12,14 @@ public class FractionTest {
     private Fraction fraction, fractionNoEquivalent, propiaFraction;
 
     private Fraction fraction2;
+    private Fraction fraction;
+    private Fraction fraction2;
     @BeforeEach
     void before() {
         fraction = new Fraction(10, 2);
         fractionNoEquivalent = new Fraction(5, 5);
         propiaFraction = new Fraction(2,5);
+        fraction2 = new Fraction(2,10);
         fraction2 = new Fraction(2,10);
     }
 
@@ -40,6 +43,16 @@ public class FractionTest {
         Assertions.assertEquals(true, fraction.isEquivalent(fraction));
         Assertions.assertEquals(false, fraction.isEquivalent(fractionNoEquivalent));
     }
+
+    @Test
+    void testIsPropia(){
+
+        Assertions.assertEquals(false,fraction.isPropia());
+
+
+        Assertions.assertEquals(true,fraction2.isPropia());
+    }
+
 
     @Test
     void testIsPropia(){

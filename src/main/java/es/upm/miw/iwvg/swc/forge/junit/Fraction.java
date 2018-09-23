@@ -56,6 +56,9 @@ public class Fraction {
     public boolean  isPropia(){ return this.numerator < this.denominator;}
 
 
+    public boolean  isPropia(){ return this.numerator < this.denominator;}
+
+
     public int getNumerator() {
         return numerator;
     }
@@ -67,6 +70,7 @@ public class Fraction {
     public boolean isImpropia(){
         return (this.numerator > this.denominator) ? true : false;
     }
+
 
 
 }
