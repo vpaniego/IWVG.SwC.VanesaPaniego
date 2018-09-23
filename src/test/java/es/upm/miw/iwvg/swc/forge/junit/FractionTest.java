@@ -10,10 +10,11 @@ import org.junit.jupiter.api.Test;
 public class FractionTest {
 
     private Fraction fraction;
-
+    private Fraction fraction2;
     @BeforeEach
     void before() {
         fraction = new Fraction(10, 2);
+        fraction2 = new Fraction(2,10);
     }
 
     @Test
@@ -30,6 +31,16 @@ public class FractionTest {
     void testFractionDenominator() {
         Assertions.assertEquals(2, fraction.getDenominator());
     }
+
+    @Test
+    void testIsPropia(){
+
+        Assertions.assertEquals(false,fraction.isPropia());
+
+
+        Assertions.assertEquals(true,fraction2.isPropia());
+    }
+
 
     @Test
     void whenArithmeticExceptionThrown_thenAssertionSucceeds() {
