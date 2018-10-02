@@ -1,6 +1,7 @@
 package es.upm.miw.iwvg.swc.forge.junit;
 
 import es.upm.miw.iwvg.swc.forge.junit.User;
+import org.apache.logging.log4j.LogManager;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -38,5 +39,32 @@ public class UserTest {
     void testUserFamilyName() {
         Assertions.assertEquals("Paniego", user.getFamilyName());
     }
+
+    @Test
+    void testMayusculasNombreCompleto(){
+        Assertions.assertEquals("PEPE MOLINA", new User(21, "Pepe", "Molina").mayusculasNombreCompleto());
+    }
+
+    @Test
+    void testMayusculasNombreCompleto_IllegalArgumentException_null(){
+        IllegalArgumentException exceptionName = Assertions.assertThrows(IllegalArgumentException.class,
+                () -> new User(2, null, "Pedro").mayusculasNombreCompleto());
+        LogManager.getLogger(this.getClass()).debug(exceptionName.getMessage());
+    }
+
+    @Test
+    void testMayusculasNombreCompleto_IllegalArgumentException_empty() {
+        IllegalArgumentException exception = Assertions.assertThrows(IllegalArgumentException.class,
+                () -> new User(2, "pedro", "").mayusculasNombreCompleto());
+        LogManager.getLogger(this.getClass()).debug(exception.getMessage());
+    }
+
+    @Test
+    void testMayusculasNombreCompleto_IllegalArgumentException_blank() {
+        IllegalArgumentException exception = Assertions.assertThrows(IllegalArgumentException.class,
+                () -> new User(2, " ", "pino").mayusculasNombreCompleto());
+        LogManager.getLogger(this.getClass()).debug(exception.getMessage());
+    }
+
 
 }

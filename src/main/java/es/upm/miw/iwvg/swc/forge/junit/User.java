@@ -15,6 +15,9 @@ public class User {
     }
 
     private String format(String string) {
+        if(string == null || string.isEmpty() || string.equals(" ")){
+            throw new IllegalArgumentException("Nombre de usuario desconocido");
+        }
         return string.trim().substring(0, 1).toUpperCase() + string.substring(1).toLowerCase();
     }
 
@@ -36,6 +39,10 @@ public class User {
 
     public String getFamilyName() {
         return this.familyName;
+    }
+
+    public String mayusculasNombreCompleto() {
+        return this.name.toUpperCase() + " " + this.familyName.toUpperCase();
     }
 
 
